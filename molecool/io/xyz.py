@@ -1,5 +1,5 @@
 """
-Functions for manipulating xyz files
+Functions to manipulate xyz files
 """
 
 import numpy as np

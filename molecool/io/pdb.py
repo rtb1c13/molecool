@@ -1,5 +1,5 @@
-""
-Functions for manipulating pdb files
+"""
+Functions to manipulate pdb files
 """
 
 import numpy as np

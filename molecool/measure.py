@@ -3,7 +3,8 @@ Functions to measure/calculate values from structures
 """
 
 import numpy as np
-
+#from .molecule import calculate_molecular_mass
+from .atom_data import *
 
 def calculate_distance(coords_A, coords_B):
     """Calculate the distance between two points.
@@ -25,6 +26,9 @@ def calculate_distance(coords_A, coords_B):
     >>> calculate_distance(r1, r2)
     0.1
     """
+
+    if not isinstance(coords_A, np.ndarray) or not isinstance(coords_B, np.ndarray):
+        raise TypeError("Input must be type np.ndarray!")
     
     difference_vec = (coords_A - coords_B)
     distance = np.linalg.norm(difference_vec)
@@ -43,3 +47,6 @@ def calculate_angle(rA, rB, rC, degrees=False):
         return np.degrees(theta)
     else:
         return theta
+
+
+
